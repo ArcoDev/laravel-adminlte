@@ -55,7 +55,25 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $appends = [
-        'profile_photo_url',
-    ];
+     protected $appends = [
+         'profile_photo_url',
+        ];
+
+    //Recuperar imagen de la BD
+    public function adminlte_image()
+    {
+        return 'https://picsum.photos/300/300';
+    }
+
+    //Recuperar rol del usuario
+    public function adminlte_desc()
+    {
+        return 'Administrador';
+    }
+
+    //Agregar boton para direccion de perfil
+    public function adminlte_profile_url()
+    {
+        return 'profile/username';
+    }
 }
